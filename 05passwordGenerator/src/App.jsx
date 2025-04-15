@@ -14,7 +14,7 @@ function App() {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     if (numberAllowed) str += "0123456789"
-    if (charAllowed) str += "!@#$%^&*-_+=[]{}~`"
+    if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";
 
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
@@ -38,11 +38,10 @@ function App() {
     window.navigator.clipboard.writeText(password)
   }, [password])
 
-
   return (
-    <div>
+    < div >
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
-        <h1 className='text-white text-center my-3'> Pasasword Generator</h1>
+        <h1 className='text-white text-center my-3'> Password Generator</h1>
 
         <div className="flex shadow rounded-lg overflow-hidden mb-4">
           <input
@@ -84,7 +83,7 @@ function App() {
               defaultChecked={charAllowed}
               id='charInput'
               onChange={() => {
-                setCharAllowed((prev) => !prev);
+                setCharAllowed((prev) => !prev)
               }}
             />
             <label htmlFor="charInput">Characters</label>
@@ -93,7 +92,7 @@ function App() {
 
 
       </div>
-    </div>
+    </div >
   )
 }
 
